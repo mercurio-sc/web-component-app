@@ -9,7 +9,7 @@ export default defineConfig({
       formats: ["es", "cjs"],
     },
     rollupOptions: {
-      external: ["react", "react-dom/client", "@r2wc/core"],
+      external: ["react", "react-dom/client"],
     },
   },
   plugins: [dts()],

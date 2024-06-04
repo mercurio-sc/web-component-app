@@ -8,6 +8,7 @@ type PropNames<Props> = Array<PropName<Props>>;
 
 export interface WebComponentOptions<Props> {
   shadow?: "open" | "closed";
+  styles?: string | string[];
   props?: PropNames<Props> | Partial<Record<PropName<Props>, WebComponentType>>;
 }
 
@@ -87,6 +88,19 @@ export default function webComponentAppCore<
       }) as unknown as HTMLElement;
 
       this[propsSymbol].container = this.container;
+
+      if (options.styles) {
+        const styles = Array.isArray(options.styles)
+          ? options.styles
+          : [options.styles];
+
+        for (const style of styles) {
+          const element = document.createElement("link");
+          element.rel = "stylesheet";
+          element.href = style;
+          this.container.appendChild(element);
+        }
+      }
 
       for (const prop of propNames) {
         const attribute = mapPropAttribute[prop];
