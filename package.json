@@ -1,6 +1,6 @@
 {
   "name": "@mercurio-sc/web-component-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create a Web Component with a Shadow DOM using React Components.",
   "author": "Brandon Pérez <bperez@sistecredito.com>",
   "license": "MIT",
