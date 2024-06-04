@@ -1,0 +1,38 @@
+{
+  "name": "@mercurio-sc/web-component-app",
+  "version": "1.0.0",
+  "description": "Create a Web Component with a Shadow DOM using React Components.",
+  "repository": "https://github.com/mercurio-sc/web-component-app",
+  "author": "Brandon Pérez <bperez@sistecredito.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "eslint": "eslint vite.config.ts src",
+    "prettier": "prettier --check vite.config.ts src",
+    "depcheck": "depcheck .",
+    "dev": "vite",
+    "test": "vitest",
+    "test:ci": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "clean": "rm -rf tsconfig.tsbuildinfo dist",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.4.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.11.0",
+    "@typescript-eslint/parser": "^7.11.0",
+    "eslint": "8.x",
+    "eslint-plugin-react": "^7.34.2",
+    "globals": "^15.3.0",
+    "jsdom": "^24.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.12.0",
+    "vite": "^5.2.12",
+    "vite-plugin-dts": "^3.9.1"
+  },
+  "main": "index.js"
+}
